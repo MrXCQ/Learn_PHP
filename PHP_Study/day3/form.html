@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="php_form.php" method="post">
+        名字： <input type="text" name="fname"> 年龄： <input type="text" name="age">
+        <input type="submit" value="提交按钮">
+
+    </form>
+    <br>
+    <!-- 下拉单选菜单 -->
+    <form action="php_form.php" method="get">
+        <select name="q">
+            <option value="">选择一个站点：</option>
+            <option value="RUNOOB">RUNOOB</option>
+            <option value="Google">Google</option>
+            <option value="TAOBAO">Taobao</option>
+            <option value="BaiDu">BaiDu</option>
+
+        </select>
+        <input type="submit" value="提交">
+
+    </form>
+
+    <br>
+    <br>
+
+    <!-- 下拉多选菜单 -->
+    <form action="php_form.php" method="post">
+        <select name="q[]" multiple='multiple'>
+            <option value="">选择一个站点：</option>
+            <option value="RUNOOB">RUNOOB</option>
+            <option value="Google">Google</option>
+            <option value="TAOBAO">Taobao</option>
+            <option value="BaiDu">BaiDu</option>
+        </select>
+        <input type="submit" value="多选提交">
+
+    </form>
+
+    <br>
+    <br>
+
+    <!-- 单选按钮表单 -->
+    <!-- PHP 单选按钮表单中 name 属性的值是一致的，value 值是不同的 -->
+    <form action="php_form.php" method="get">
+        <input type="radio" name="q3" value="RUNOOB" />runoob
+        <input type="radio" name="q3" value="Google" />Google
+        <input type="radio" name="q3" value="TAOBAO" />淘宝
+        <input type="radio" name="q3" value="BaiDu" />百度
+        <input type="submit" value="单选按钮">
+    </form>
+
+    <br>
+    <br>
+    <!-- checkbox 复选框 -->
+    <!-- PHP 复选框可以选择多个值 -->
+    <form action="php_form.php" method="post">
+
+        <input type="checkbox" name="q4[]" value="RUNOOB" /> runoob <br>
+        <input type="checkbox" name="q4[]" value="Google" /> Google <br>
+        <input type="checkbox" name="q4[]" value="TAOBAO" /> 淘宝 <br>
+        <input type="checkbox" name="q4[]" value="BaiDu" /> 百度 <br>
+
+        <input type="submit" value="复选框按钮提交">
+    </form>
+
+    <br><br>
+
+    <!-- 表单验证 -->
+    <!-- <?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> -->
+    <!-- <form action="php_form.php" method="post">
+        姓名：<input type="text" name="name">
+        <br><br> E-mail: <input type="text" name="email">
+        <br><br> 网址： <input type="text" name="website">
+        <br><br> 备注 <textarea name="comment" cols="30" rows="10"></textarea>
+        <br><br> 性别：
+        <input type="radio" name="gender" value="female">女
+        <input type="radio" name="gender" value="male">男
+        <br><br>
+        <input type="submit" value="提交按钮" name="submit">
+    </form> -->
+
+    <!-- 错误信息验证 -->
+    <p><span class="error">* 必填信息</span></p>
+    <form action="php_form.php" method="post">
+        名字： <input type="text" name="name">
+        <span class="error">*<?php echo $nameErr; ?></span>
+        <br><br> E-mail: <input type="text" name="email">
+        <span class="error">*<?php echo $emailErr; ?></span>
+        <br><br> 网址： <input type="text" name="website">
+        <span class="error">*<?php echo $websiteErr; ?></span>
+        <br><br> 备注 <textarea name="comment" cols="30" rows="10"></textarea>
+        <span class="error">*<?php echo $commentErr; ?></span>
+        <br><br> 性别：
+        <input type="radio" name="gender" value="female">女
+        <input type="radio" name="gender" value="male">男
+        <br><br>
+        <input type="submit" value="提交按钮" name="submit">
+
+
+    </form>
+
+
+</body>
+
+</html>
