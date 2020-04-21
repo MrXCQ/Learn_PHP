@@ -66,5 +66,18 @@ xcq_echo($newStr);
 
 xcq_echo("替换次数".$count);
 
+$newStr1 = str_ireplace("A","替换后的字符串",$string2,$count);
+
+xcq_echo($newStr1);
+
+xcq_echo("不区分大小写的字符串次数".$count);
+
+
+
+// 字符串截取操作
+
+
+
+
 
 ?>
