@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+
+
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        #box {
+            width: 300px;
+            height: 300px;
+            border: 15px solid green;
+            margin: 30px auto;
+            text-align: justify;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        /* 上右下左 HTML 顺时针 iOS 大多是逆时针*/
+        
+        #float1,
+        #float2 {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        
+        #float1 {
+            background-color: red;
+        }
+        
+        #float2 {
+            background-color: blue;
+        }
+        
+        #noFloat {
+            width: 400px;
+            height: 400px;
+            background-color: cadetblue;
+            clear: both;
+        }
+        
+        p:first-child {
+            color: red;
+        }
+        
+        p:first-child span {
+            color: saddlebrown;
+        }
+        
+        h1:first-child:after {
+            content: url('img.png');
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- margin 外边距  border 边框padding 内边距content 内容 -->
+
+    <!-- CSS 伪类 -->
+    <p><span>第</span>一个P标签</p>
+    <p>第二个P标签</p>
+    <p>第三个P标签</p>
+
+    <div id="box">
+        <h1>这是盒子内的一段内容</h1>
+    </div>
+
+    <div id="float1"></div>
+    <div id="float2"></div>
+
+    <!-- 常用此方法清楚浮动 -->
+    <div style="clear: both;"></div>
+
+    <div id="noFloat"></div>
+
+
+    <h1>标题一</h1>
+    <h1>标题二</h1>
+
+
+</body>
+
+</html>

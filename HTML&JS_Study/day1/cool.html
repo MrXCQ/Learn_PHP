@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页</title>
+</head>
+
+<style>
+    body {
+        background-color: antiquewhite;
+    }
+    
+    h1 {
+        color: red;
+        text-align: center;
+    }
+    
+    p {
+        color: red;
+        font-size: 12px;
+        text-align: left;
+        text-decoration: overline;
+        text-indent: 5em;
+        line-height: 30px;
+    }
+    /* 未访问链接 */
+    
+    a:link {
+        color: #000000;
+        text-decoration: none;
+    }
+    /* 已访问链接 */
+    
+    a:visited {
+        color: red;
+        text-decoration: none;
+    }
+    /* 鼠标移动到链接上 */
+    
+    a:hover {
+        color: royalblue;
+        text-decoration: underline;
+    }
+    /* 鼠标点击时 */
+    
+    a:active {
+        color: saddlebrown;
+        text-decoration: underline;
+    }
+    
+    ul {
+        /* list-style: none; */
+        list-style-image: url('mama31.png');
+    }
+    
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+    td {
+        border: 1px solid black;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+    }
+    
+    #th {
+        background-color: greenyellow;
+    }
+    
+    #th td {
+        height: 30px;
+        border: 1px solid royalblue;
+    }
+    
+    #postion {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+    }
+    /* 相对于当前位置 */
+    /* #postion2 {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        position: relative;
+        top: -100px;
+    } */
+    /* 相对于父视图定位 */
+    
+    #postion2 {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        position: absolute;
+        top: 1000px;
+    }
+    
+    #header {
+        width: 960px;
+        height: 150px;
+        background-color: greenyellow;
+        max-width: 0 auto;
+        color: grey;
+        text-align: center;
+        line-height: 150px;
+    }
+    
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    /* +p */
+    
+    div~p {
+        color: indigo;
+    }
+    
+    #show,
+    #hide {
+        width: 300px;
+        height: 300px;
+    }
+    
+    #show {
+        background-color: lightcoral;
+        display: inline;
+    }
+    
+    #hide {
+        background-color: khaki;
+        /* display: none;  隐藏的区域占位消失*/
+        /* visibility: hidden;  隐藏的区域占位还在*/
+        /* display: inline; */
+    }
+</style>
+
+<body>
+
+    <h1>生活不止眼前的苟且</h1>
+    <h2>更有诗和远方</h2>
+    <p>不要扯淡了，现实会给你狠狠一击</p>
+
+
+    <h1 id="#">CSS 才是让网页更好看的技术</h1>
+    <div>这是一张样例图片</div>
+    <p>这是一串文本内容：今天天气真好！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！这是一串文本内容：今天天气真好！！！！！</p>
+
+    <a href="#" target="_blank">这是一个链接地址</a>
+
+
+    <ul>
+        <li>今天天气真好！！</li>
+        <li>今天天气真好！！</li>
+        <li>今天天气真好！！</li>
+        <li>今天天气真好！！</li>
+        <li>今天天气真好！！</li>
+        <li>今天天气真好！！</li>
+        <li>今天天气真好！！</li>
+    </ul>
+
+
+    <table>
+        <tr id="th">
+            <td>ID</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>小明</td>
+            <td>男</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>小芳</td>
+            <td>女</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>小李</td>
+            <td>男</td>
+            <td>12</td>
+        </tr>
+
+    </table>
+
+
+
+    <!-- 定位 -->
+
+    <div id="postion"></div>
+
+    <div id="postion2"></div>
+
+    <div id="header">今天天气真好</div>
+
+    <img src="img.png" alt="" srcset="">
+
+
+    <div>
+        <p>孩子</p>
+    </div>
+
+    <p>兄弟</p>
+    <p>后面所有的兄弟</p>
+
+    <!-- 显示与隐藏 -->
+
+    <div id="show">
+        现实
+    </div>
+    <div id="hide">
+
+    </div>
+
+
+</body>
+
+</html>
